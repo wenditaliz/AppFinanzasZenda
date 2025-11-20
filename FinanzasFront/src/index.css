@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 🎨 Paleta AZUL ZENDA (modo claro) */
+    --background: 100% 0 100%;
+    --foreground: 230 0.05 20%;
+
+    /* Color principal: oklch(80.9% 0.105 251.813) */
+    --primary: 80.9% 0.105 251.813;
+    --primary-foreground: 100% 0 0;
+
+    --secondary: 92% 0.06 251.813;
+    --secondary-foreground: 20% 0.05 251.813;
+
+    --accent: 88% 0.07 251.813;
+    --accent-foreground: 20% 0.05 251.813;
+
+    --muted: 94% 0.04 251.813;
+    --muted-foreground: 30% 0.04 251.813;
+
+    --border: 90% 0.05 251.813;
+    --input: 90% 0.05 251.813;
+    --ring: 80.9% 0.105 251.813;
+
+    --card: 100% 0 100%;
+    --card-foreground: 230 0.05 20%;
+  }
+
+  /* 🌙 Paleta AZUL ZENDA (modo oscuro) */
+  .dark {
+    --background: 25% 0.04 251.813;
+    --foreground: 98% 0.03 251.813;
+
+    --primary: 80.9% 0.105 251.813;
+    --primary-foreground: 100% 0 0;
+
+    --secondary: 40% 0.05 251.813;
+    --secondary-foreground: 98% 0.03 251.813;
+
+    --accent: 35% 0.05 251.813;
+    --accent-foreground: 98% 0.03 251.813;
+
+    --muted: 30% 0.04 251.813;
+    --muted-foreground: 80% 0.03 251.813;
+
+    --border: 35% 0.05 251.813;
+    --input: 35% 0.05 251.813;
+    --ring: 80.9% 0.105 251.813;
+
+    --card: 25% 0.05 251.813;
+    --card-foreground: 98% 0.03 251.813;
+  }
+
+  @layer components {
+  /* 💫 Botón principal estilo ZENDA */
+  .btn {
+    @apply rounded-full px-6 py-3 font-semibold transition shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+  }
+}
+
+
+  body {
+    @apply bg-background text-foreground antialiased transition-colors;
+  }
+}
